@@ -1,6 +1,14 @@
+"use client";
+
 import { Avatar, Box, Flex, Heading, Link, Text } from "@chakra-ui/react";
 import { ConnectWallet, useAddress } from "@thirdweb-dev/react";
+
 import NextLink from 'next/link';
+import { client } from "../pages/client";
+import { chain } from "../pages/chain";
+import { ConnectButton, MediaRenderer, useActiveAccount, useReadContract } from "thirdweb/react";
+import { inAppWallet } from "thirdweb/wallets";
+
 
 export function Navbar() {
     const address = useAddress();
@@ -9,7 +17,7 @@ export function Navbar() {
         <Box maxW={"1200px"} m={"auto"} py={"10px"}px={"40px"}>
             <Flex justifyContent={"space-between"} alignItems={"center"}>
                 <Link as={NextLink} href='/'>
-                    <Heading>Marketplace</Heading>
+                    <Heading>ArtAsset Marketplace</Heading>
                 </Link>
                 <Flex direction={"row"}>
                     <Link as={NextLink} href='/buy' mx={2.5}>
@@ -20,7 +28,7 @@ export function Navbar() {
                     </Link>
                 </Flex>
                 <Flex dir={"row"} alignItems={"center"}>
-                    <ConnectWallet/>
+                    <ConnectWallet />
                     {address && (
                         <Link as={NextLink} href={`/profile/${address}`}>
                             <Avatar src='https://bit.ly/broken-link' ml={"20px"}/>

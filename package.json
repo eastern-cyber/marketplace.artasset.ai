@@ -20,8 +20,9 @@
     "framer-motion": "^10.10.0",
     "next": "^13",
     "react": "^18.2",
-    "react-dom": "^18.2",
-    "react-hook-form": "^7.43.9"
+    "react-dom": "^18.3.1",
+    "react-hook-form": "^7.43.9",
+    "thirdweb": "^5.88.4"
   },
   "devDependencies": {
     "@types/node": "22.13.4",

@@ -1,3 +1,5 @@
+"use client";
+
 import NextLink from 'next/link'
 import type { NextPage } from "next";
 import { Button, Container, Flex, Heading, Image, Stack } from '@chakra-ui/react';
