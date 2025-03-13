@@ -6,7 +6,7 @@ import { ConnectWallet, useAddress } from "@thirdweb-dev/react";
 import NextLink from 'next/link';
 import { client } from "../pages/client";
 import { chain } from "../pages/chain";
-import { ConnectButton, MediaRenderer, useActiveAccount, useReadContract } from "thirdweb/react";
+import { ConnectButton } from "thirdweb/react";
 import { inAppWallet } from "thirdweb/wallets";
 
 
@@ -26,6 +26,9 @@ export function Navbar() {
                     <Link as={NextLink} href='/sell' mx={2.5}>
                         <Text>Sell</Text>
                     </Link>
+                </Flex>
+                <Flex>
+                    {/* <ConnectButton /> */}
                 </Flex>
                 <Flex dir={"row"} alignItems={"center"}>
                     <ConnectWallet />

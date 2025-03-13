@@ -11,18 +11,19 @@
     "deploy": "next build && next export && npx thirdweb@latest upload out"
   },
   "dependencies": {
-    "@chakra-ui/react": "^2.5.5",
-    "@emotion/react": "^11.10.6",
+    "@chakra-ui/react": "^2.10.6",
+    "@emotion/react": "^11.14.0",
     "@emotion/styled": "^11.10.6",
-    "@thirdweb-dev/react": "^3.9.0",
+    "@paperxyz/sdk-common-utilities": "^0.1.1",
+    "@thirdweb-dev/react": "^4.9.4",
     "@thirdweb-dev/sdk": "^3.9.0",
     "ethers": "^5.7.2",
     "framer-motion": "^10.10.0",
     "next": "^13",
-    "react": "^18.2",
+    "react": "^18.3.1",
     "react-dom": "^18.3.1",
     "react-hook-form": "^7.43.9",
-    "thirdweb": "^5.88.4"
+    "thirdweb": "^5.88.7"
   },
   "devDependencies": {
     "@types/node": "22.13.4",
