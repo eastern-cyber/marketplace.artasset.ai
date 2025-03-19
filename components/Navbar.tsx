@@ -1,13 +1,14 @@
 "use client";
 
 import { Avatar, Box, Flex, Heading, Link, Text } from "@chakra-ui/react";
-import { ConnectWallet, useAddress } from "@thirdweb-dev/react";
+import { ConnectWallet, darkTheme, useAddress } from "@thirdweb-dev/react";
 
 import NextLink from 'next/link';
 import { client } from "../pages/client";
 import { chain } from "../pages/chain";
 import { ConnectButton } from "thirdweb/react";
 import { inAppWallet } from "thirdweb/wallets";
+import WalletConnect from "./WalletConnect";
 
 
 export function Navbar() {
@@ -28,15 +29,10 @@ export function Navbar() {
                     </Link>
                 </Flex>
                 <Flex>
-                    {/* <ConnectButton /> */}
+                    {/* <WalletConnect /> */}
                 </Flex>
                 <Flex dir={"row"} alignItems={"center"}>
                     <ConnectWallet />
-                    {address && (
-                        <Link as={NextLink} href={`/profile/${address}`}>
-                            <Avatar src='https://bit.ly/broken-link' ml={"20px"}/>
-                        </Link>
-                    )}
                 </Flex>
             </Flex>
         </Box>
