@@ -81,7 +81,7 @@ export default function TokenPage({ nft, contractMetadata }: Props) {
         }
         return txResult;
     }
-    
+            
     return (
         <Container maxW={"1200px"} p={5} my={5}>
             <SimpleGrid columns={2} spacing={6}>
@@ -100,18 +100,25 @@ export default function TokenPage({ nft, contractMetadata }: Props) {
                         <Text>{nft.metadata.description}</Text>
                     </Box>
                     <Box>
-                        <Text fontWeight={"bold"}>Traits:</Text>
-                        <SimpleGrid columns={2} spacing={4}>
-                        {Object.entries(nft?.metadata?.attributes || {}).map(
-                        ([key, value]) => (
-                            <Flex key={key} direction={"column"} alignItems={"center"} justifyContent={"center"} borderWidth={1} p={"8px"} borderRadius={"4px"}>
-                                <Text fontSize={"small"}>{value.trait_type}</Text>
-                                <Text fontSize={"small"} fontWeight={"bold"}>{value.value}</Text>
-                            </Flex>
-                        )
-                        )}
-                        </SimpleGrid>
+                    <Text fontWeight={"bold"}>Traits:</Text>
+                    <SimpleGrid columns={2} spacing={4}>
+                        {(nft?.metadata?.attributes as any[] || []).map((attribute, index) => (
+                        <Flex
+                            key={index}
+                            direction="column"
+                            alignItems="center"
+                            justifyContent="center"
+                            borderWidth={1}
+                            p="8px"
+                            borderRadius="4px"
+                        >
+                            <Text fontSize="small">{attribute.trait_type}</Text>
+                            <Text fontSize="small" fontWeight="bold">{attribute.value}</Text>
+                        </Flex>
+                        ))}
+                    </SimpleGrid>
                     </Box>
+
                 </Stack>
                 
                 <Stack spacing={"20px"}>
