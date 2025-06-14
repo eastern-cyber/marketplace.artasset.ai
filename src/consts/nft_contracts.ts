@@ -1,5 +1,5 @@
 import type { Chain } from "thirdweb";
-import { avalancheFuji, polygonAmoy } from "./chains";
+import { avalancheFuji, polygonAmoy, polygon } from "./chains";
 
 export type NftContract = {
   address: string;
@@ -19,6 +19,14 @@ export type NftContract = {
  * In reality, the list should be dynamically fetched from your own data source
  */
 export const NFT_CONTRACTS: NftContract[] = [
+  {
+    address: "0x5F53924aE42b8DaC8D5605423a5B432c627A8365",
+    chain: polygon,
+    title: "ArtAsset NFT",
+    thumbnailUrl:
+      "https://ipfs.io/ipfs/QmR6fhaTxKrFyBsdTpwgrsXBPaqGe1516ewz2ypxEeZGm1/ArtAsset_Logo.png",
+    type: "ERC721",
+  },
   {
     address: "0x6b869a0cF84147f05a447636c42b8E53De65714E",
     chain: avalancheFuji,
