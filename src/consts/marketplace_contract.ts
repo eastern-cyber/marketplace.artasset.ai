@@ -1,5 +1,5 @@
 import type { Chain } from "thirdweb";
-import { avalancheFuji, polygonAmoy, sepolia,polygon } from "./chains";
+import { avalancheFuji, polygonAmoy, sepolia, polygon } from "./chains";
 
 type MarketplaceContract = {
   address: string;
