@@ -46,7 +46,7 @@ const links: NavLink[] = [
   { name: "Paintings", href: "/paintings" },
   { name: "Photographs", href: "/photographs" },
   { name: "Crafts", href: "/crafts" },
-  { name: "Trade", href: "./" },
+  { name: "Trade", href: "./collection/137/0x5F53924aE42b8DaC8D5605423a5B432c627A8365/" },
 ];
 
 export function Navbar() {
