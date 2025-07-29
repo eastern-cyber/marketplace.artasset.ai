@@ -67,6 +67,21 @@ export function Navbar() {
         {/* Desktop Nav */}
         <Flex display={{ base: "none", md: "flex" }} align="center" gap={6}>
           {links.map((link) => {
+            const isExternal = link.target === "_blank";
+
+            return (
+              <ChakraLink
+                key={link.name}
+                href={link.href}
+                isExternal={isExternal}
+                _hover={{ textDecoration: "none" }}
+              >
+                {link.name}
+              </ChakraLink>
+            );
+          })}
+          {/* 
+          {links.map((link) => {
             const isActive = pathname === link.href;
             return link.target === "_blank" ? (
               <ChakraLink
@@ -93,7 +108,8 @@ export function Navbar() {
                 {link.name}
               </Link>
             );
-          })}
+          })} 
+          */}
         </Flex>
 
         {/* Right section */}
