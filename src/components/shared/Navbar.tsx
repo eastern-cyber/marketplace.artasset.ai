@@ -36,7 +36,13 @@ import { useGetENSAvatar } from "@/hooks/useGetENSAvatar";
 import { Link } from "@chakra-ui/next-js";
 import { SideMenu } from "./SideMenu";
 
-const links = [
+type NavLink = {
+  name: string;
+  href: string;
+  target?: "_blank" | "_self"; // optional
+};
+
+const links: NavLink[] = [
   { name: "Paintings", href: "/paintings" },
   { name: "Photographs", href: "/photographs" },
   { name: "Crafts", href: "/crafts" },
