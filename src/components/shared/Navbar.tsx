@@ -35,6 +35,8 @@ import { useGetENSName } from "@/hooks/useGetENSName";
 import { useGetENSAvatar } from "@/hooks/useGetENSAvatar";
 import { Link } from "@chakra-ui/next-js";
 import { SideMenu } from "./SideMenu";
+import WalletConnect from "./WalletConnect";
+
 
 type NavLink = {
   name: string;
@@ -124,11 +126,12 @@ export function Navbar() {
           {account && wallet ? (
             <ProfileButton address={account.address} wallet={wallet} />
           ) : (
-            <ConnectButton
-              client={client}
-              theme={colorMode}
-              connectButton={{ style: { height: "56px" } }}
-            />
+            <WalletConnect />
+            // <ConnectButton
+            //   client={client}
+            //   theme={colorMode}
+            //   connectButton={{ style: { height: "56px" } }}
+            // />
           )}
           {/* Mobile Menu Toggle */}
           <IconButton
